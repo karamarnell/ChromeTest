@@ -1,0 +1,71 @@
+# Configuration for iDEAL.
+type IDealConfiguration {
+  # The route ID used to process an iDEAL payment.
+  routeId: String
+
+  # A URL used to redirect the user to the banks' web page.
+  assetsUrl: String
+}
+
+# Configuraion for Kount fraud tools.
+type KountConfiguration {
+  # The Kount merchant ID used to identify the fraud data collection request.
+  merchantId: String
+}
+
+# Configuration for MasterPass.
+type MasterpassConfiguration {
+  # The MasterPass merchant checkout ID used to identify the merchant in Masterpass requests.
+  merchantCheckoutId: String
+
+  # A list of card brands supported for Masterpass by the current merchant.
+  supportedCardBrands: [CreditCardBrandCode]
+}
+
+# Configuration for Samsung Pay on Android.
+type SamsungPayConfiguration {
+  # A string used to identify the merchant to the end user.
+  displayName: String
+
+  # The Samsung Pay service ID.
+  serviceId: String
+
+  # Authorization to use when tokenizing Samsung Payy.
+  samsungAuthorization: String
+
+  # A list of card brands supported for Samsung Pay by the current merchant.
+  supportedCardBrands: [CreditCardBrandCode]
+}
+
+# Configuration for UnionPay cards.
+type UnionPayConfiguration {
+  # The Braintree merchant account ID with UnionPay processing enabled.
+  merchantAccountId: String
+}
+
+# Fields describing a credit card.
+type CreditCardDetails {
+  # The display name of the card brand, ex: Visa, American Express.
+  brand: String
+
+  # A static code identifying the card brand (see `CreditCardBrandCodeTESTCODE`).
+  brandCode: CreditCardBrandCode
+
+  # The last four digits of the credit card number.
+  last4: String
+
+  # Information about the credit card based on its BIN (see `BinRecord`).
+  binData: BinRecord
+}
+
+# Fields describing a credit card attached to a customer's Google Pay account.
+type CreditCardDetails {
+  # The display name of the card brand, ex: Visa, American Express.
+  brand: String
+  
+  Creating a new string here
+  
+  how is you doing today?
+  
+  
+  
